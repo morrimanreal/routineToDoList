@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>App cannot be converted to typsescript since i didnt pick the right settings at the beginning of building the project</div>
   )
 }
 
