@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import { Routes, Route } from 'react-router-dom'
 import { NewTodoForm } from './components/NewTodoForm'
-import "./styles.css"
 import { TodoList } from "./components/TodoList"
-// import './global.css'
+// import { SigninForm } from './_auth/forms/SigninForm'
+// import { SignupForm } from './_auth/forms/SignupForm'
+import "./styles.css"
+import './global.css'
 
 
 const App = () => {
@@ -43,8 +45,21 @@ const App = () => {
     })
   }
 
+  // return (
+  //   <main className="flex h-screen">
+  //     <Routes>
+  //       { /* public routes */}
+  //       <Route path="/sign-in" element={<SigninForm />} />
+  //       <Route path="/sign-in" element={<SignupForm />} />
+
+  //       { /* private routes */}
+  //       <Route index element={<Home />} />
+  //     </Routes>
+  //   </main>
+  // )
+
   return (
-    <main>
+    <main className="flex h-screen">
       <NewTodoForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
       <TodoList
@@ -57,3 +72,4 @@ const App = () => {
 }
 
 export default App
+

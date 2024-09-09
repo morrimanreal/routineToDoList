@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from "react"
 
 export function NewTodoForm(props) { //can be ( {onSubmit} ) and take out prop on prob.onSubmit, destructuring method
