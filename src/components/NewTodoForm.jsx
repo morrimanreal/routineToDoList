@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react"
+import { Button } from "@/components/ui/button"
 
 export function NewTodoForm(props) { //can be ( {onSubmit} ) and take out prop on prob.onSubmit, destructuring method
   const [newItem, setNewItem] = useState("")

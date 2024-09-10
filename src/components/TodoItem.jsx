@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from "@/components/ui/button"
 
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
@@ -13,7 +14,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
       </label>
       <button
         onClick={() => { deleteTodo(id) }}
-        className="btn btn-danger"
+      // className="btn btn-danger"
       > Delete </button>
     </li>
   )
