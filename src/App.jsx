@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react"
 import { Routes, Route } from 'react-router-dom'
-// import { NewTodoForm } from './components/NewTodoForm'
-// import { TodoList } from "./components/TodoList"
-import { SigninForm } from './_auth/forms/SigninForm'
-import { SignupForm } from './_auth/forms/SignupForm'
+
+{/*Pages */ }
+import { NewTodoForm } from './components/NewTodoForm'
+import { TodoList } from "./components/TodoList"
+import SignupForm from './_auth/forms/SignupForm'
+import SigninForm from './_auth/forms/SigninForm'
+import AuthLayout from './_auth/AuthLayout'
+import Home from './_root/pages/Home'
+
+{/* CSS */ }
 import "./styles.css"
-import AuthLayout from "./_auth/AuthLayout"
-// import './global.css'
+import './global.css'
 
 
 const App = () => {
@@ -14,13 +19,13 @@ const App = () => {
     <main className="flex h-screen">
       <Routes>
         { /* public routes */}
-        <Route element={<AuthLayout}>
-          <Route path="/sign-in" element={<SignupForm />} />
-          <Route path="/sign-in" element={<SigninForm />} />
+        <Route element={<AuthLayout />}>
+          <Route path="/sign-in" component={< SignupForm />} />
+          <Route path="/sign-in" component={<SigninForm />} />
         </Route>
 
         { /* private routes */}
-        <Route element={<RootLayout />}>
+        <Route >
           <Route index element={<Home />} />
         </Route>
       </Routes>
